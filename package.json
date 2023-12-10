@@ -6,6 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "db:dev:up": "docker compose up -d",
+    "db:dev:down": "docker compose down",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -25,6 +27,7 @@
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/swagger": "^7.1.16",
+    "@prisma/client": "^5.7.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
