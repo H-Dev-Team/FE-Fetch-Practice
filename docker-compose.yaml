@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:8
+    ports:
+      - '3536:3306'
+    restart: 'unless-stopped'
+    volumes:
+      - db-volume:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=hoplin1234!
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=judge
+networks:
+  system:
+    driver: bridge
+volumes:
+  db-volume:
+    external: false
