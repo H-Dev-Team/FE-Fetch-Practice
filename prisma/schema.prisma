@@ -13,11 +13,11 @@ datasource db {
 
 model Board {
   id       String @id @default(uuid())
-  title    String 
-  content  String
+  title    String @default("New Title")
+  content  String @default("Content Here")
   hashtags Json
 
-  createdAt DateTime
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("board")
