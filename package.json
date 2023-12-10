@@ -6,8 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "db:dev:up": "docker compose up -d",
-    "db:dev:down": "docker compose down",
+    "start:container": "docker compose up -d api",
+    "db:dev:up": "docker compose up -d db",
+    "db:dev:down": "docker compose down db",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
